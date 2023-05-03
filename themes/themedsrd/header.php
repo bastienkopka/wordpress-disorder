@@ -20,7 +20,9 @@
         </button>
 
         <div class="header__navigation">
-          <div class="search">Recherche</div>
+          <div class="search">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
 
           <div class="header__left">
             <div class="social-media social-media--desktop"><?php require get_template_directory() . '/templates/header/social-media.php'; ?></div>

@@ -5,7 +5,7 @@ function toggleNavigation() {
   const activeClass = 'active';
   const buttonMenu = document.querySelector('.header__toggle');
   const navigationClass = document.querySelector('.header__navigation');
-  if (!buttonMenu) {
+  if (!buttonMenu && !navigationClass) {
     return;
   }
 
