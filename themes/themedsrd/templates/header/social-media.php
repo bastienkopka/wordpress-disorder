@@ -1,4 +1,4 @@
-<ul class="social-media">
+<ul class="social-media__list">
   <?php if (get_theme_mod('facebook_setting')) : ?>
     <li>
       <a href="<?= get_theme_mod('facebook_setting'); ?>" target="_blank"><i class="fa-brands fa-facebook"></i></a>

@@ -12,31 +12,40 @@
     <header role="banner" class="header">
       <div class="header__container">
 
-        <div class="search">Recherche</div>
+        <div class="social-media social-media--mobile"><?php require get_template_directory() . '/templates/header/social-media.php'; ?></div>
+        <div class="header__logo header__logo--mobile"><?php require get_template_directory() . '/templates/header/logo.php'; ?></div>
 
-        <div class="header__left">
-          <div><?php require get_template_directory() . '/templates/header/social-media.php'; ?></div>
-          <div>
-            <?php wp_nav_menu([
-              'theme_location' => 'main-menu-left',
-              'container_class' => 'menu',
-              'menu_class' => 'menu__left',
-            ]); ?>
+        <button class="header__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="header__navigation">
+          <div class="search">Recherche</div>
+
+          <div class="header__left">
+            <div class="social-media social-media--desktop"><?php require get_template_directory() . '/templates/header/social-media.php'; ?></div>
+            <div>
+              <?php wp_nav_menu([
+                'theme_location' => 'main-menu-left',
+                'container_class' => 'menu',
+                'menu_class' => 'menu__left',
+              ]); ?>
+            </div>
           </div>
-        </div>
 
-        <div class="header__middle">
-          <?php require get_template_directory() . '/templates/header/logo.php'; ?>
-        </div>
+          <div class="header__logo header__logo--desktop">
+            <?php require get_template_directory() . '/templates/header/logo.php'; ?>
+          </div>
 
-        <div class="header__right">
-          <div></div>
-          <div>
-            <?php wp_nav_menu([
-              'theme_location' => 'main-menu-right',
-              'container_class' => 'menu',
-              'menu_class' => 'menu__right',
-            ]); ?>
+          <div class="header__right">
+            <div></div>
+            <div>
+              <?php wp_nav_menu([
+                'theme_location' => 'main-menu-right',
+                'container_class' => 'menu',
+                'menu_class' => 'menu__right',
+              ]); ?>
+            </div>
           </div>
         </div>
       </div>

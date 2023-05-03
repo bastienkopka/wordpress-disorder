@@ -15,5 +15,7 @@ function themedsrd_styles(): void {
 	wp_enqueue_style('reset');
 	wp_enqueue_style('fontawesome');
 	wp_enqueue_style('style_css', get_stylesheet_uri());
+
+  wp_enqueue_script('main_js', get_stylesheet_directory_uri() . '/assets/js/main.js');
 }
 add_action('wp_enqueue_scripts', 'themedsrd_styles');
