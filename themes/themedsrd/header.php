@@ -12,42 +12,42 @@
     <header role="banner" class="header">
       <div class="header__container">
 
-        <div class="social-media social-media--mobile"><?php require get_template_directory() . '/templates/header/social-media.php'; ?></div>
-        <div class="header__logo header__logo--mobile"><?php require get_template_directory() . '/templates/header/logo.php'; ?></div>
+        <!-- Social -->
+        <div class="header__top">
+          <div class="social-media"><?php require get_template_directory() . '/templates/header/social-media.php'; ?></div>
+        </div>
 
-        <button class="header__toggle">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <div class="header__navigation">
-          <div class="search">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- Mobile logo + Toggle -->
+        <div class="header__mobile">
+          <div class="header__logo">
+            <?php require get_template_directory() . '/templates/header/logo.php'; ?>
           </div>
 
-          <div class="header__left">
-            <div class="social-media social-media--desktop"><?php require get_template_directory() . '/templates/header/social-media.php'; ?></div>
-            <div>
-              <?php wp_nav_menu([
-                'theme_location' => 'main-menu-left',
-                'container_class' => 'menu',
-                'menu_class' => 'menu__left',
-              ]); ?>
-            </div>
+          <button class="header__toggle d-lg-none">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Navigation -->
+        <div class="header__navigation">
+          <div class="header__navigation__left">
+            <?php wp_nav_menu([
+              'theme_location' => 'main-menu-left',
+              'container_class' => 'menu',
+              'menu_class' => 'menu__left',
+            ]); ?>
           </div>
 
           <div class="header__logo header__logo--desktop">
             <?php require get_template_directory() . '/templates/header/logo.php'; ?>
           </div>
 
-          <div class="header__right">
-            <div></div>
-            <div>
-              <?php wp_nav_menu([
-                'theme_location' => 'main-menu-right',
-                'container_class' => 'menu',
-                'menu_class' => 'menu__right',
-              ]); ?>
-            </div>
+          <div class="header__navigation__right">
+            <?php wp_nav_menu([
+              'theme_location' => 'main-menu-right',
+              'container_class' => 'menu',
+              'menu_class' => 'menu__right',
+            ]); ?>
           </div>
         </div>
       </div>

@@ -2,19 +2,19 @@
  * Allows you to open or close the mobile menu.
  */
 function toggleNavigation() {
-  const activeClass = 'active';
-  const buttonMenu = document.querySelector('.header__toggle');
-  const navigationClass = document.querySelector('.header__navigation');
-  if (!buttonMenu && !navigationClass) {
+  const activeClass = 'open-menu';
+  const toggleButton = document.querySelector('.header__toggle');
+  const navigation = document.querySelector('.header__navigation');
+  if (!toggleButton && !navigation) {
     return;
   }
 
-  buttonMenu.addEventListener('click', () => {
-    if (!navigationClass.classList.contains(activeClass)) {
-      navigationClass.classList.add(activeClass);
+  toggleButton.addEventListener('click', () => {
+    if (!navigation.classList.contains(activeClass)) {
+      navigation.classList.add(activeClass);
     }
     else {
-      navigationClass.classList.remove(activeClass)
+      navigation.classList.remove(activeClass)
     }
   });
 }

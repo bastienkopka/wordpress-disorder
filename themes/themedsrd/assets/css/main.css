@@ -1,5 +1,16 @@
-@import "utils/_utils.fonts.css";
-@import "utils/_utils.variables.css";
-@import "utils/_utils.reset.css";
+@import "reset.css";
+@import "header.css";
 
-@import "layout/_layout.header.css";
+/********* Social media **********/
+.social-media__list {
+  display: flex;
+}
+
+.social-media__list li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.social-media__list li a > i {
+  font-size: 2rem;
+  color: var(--color-white);
+}
