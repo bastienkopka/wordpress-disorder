@@ -21,7 +21,9 @@
 
         <div class="header__navigation">
           <div class="search">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="search__icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
           </div>
 
           <div class="header__left">
@@ -31,6 +33,8 @@
                 'theme_location' => 'main-menu-left',
                 'container_class' => 'menu',
                 'menu_class' => 'menu__left',
+                'link_before' => '<span>',
+                'link_after' => '</span>',
               ]); ?>
             </div>
           </div>
@@ -46,6 +50,8 @@
                 'theme_location' => 'main-menu-right',
                 'container_class' => 'menu',
                 'menu_class' => 'menu__right',
+                'link_before' => '<span>',
+                'link_after' => '</span>',
               ]); ?>
             </div>
           </div>

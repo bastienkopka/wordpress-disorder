@@ -11,6 +11,11 @@
   height: 100%;
 }
 
+.header__left {
+  display: flex;
+  flex-direction: column;
+}
+
 .header__logo--desktop, .header__navigation {
   display: none;
 }
@@ -28,8 +33,10 @@
 
 .menu ul li a {
   color: var(--color-white);
-  margin-right: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
   text-decoration: none;
+  letter-spacing: 0.12rem;
 }
 
 /*************************
@@ -52,6 +59,84 @@
 ***** RESPONSIVE *******
 *****************/
 @media (min-width: 992px) {
+  .header {
+    height: 9.4rem;
+  }
+  .header .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 9.4rem;
+    width: 15rem;
+    padding-left: 2rem;
+    background-color: var(--color-white);
+  }
+  .header .search:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0.1rem;
+    left: 0;
+    width: 16.8rem;
+    height: 9.2rem;
+    background-color: var(--color-grey-dark);
+    z-index: -1;
+  }
+  .header .search, .header .search:before {
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+  }
+  .header .search .search__icon {
+    transform: scale(2);
+  }
+
+  .header__left div:first-child {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+  }
+  .header__left div:last-child {
+    height: 5.4rem;
+    margin-left: -0.5rem;
+  }
+
+  .header__left .menu ul li {
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid var(--color-white);
+    justify-content: center;
+    transform: skewx(24deg);
+  }
+  .header__left .menu ul li a {
+    font-size: 1.6rem;
+    padding: 1.8rem;
+  }
+  .header__left .menu ul li a span {
+    display: block;
+    transform: skewx(-24deg);
+  }
+
+  .header__right {
+    display: flex;
+    height: 9.4rem;
+    align-items: flex-end;
+  }
+  .header__right .menu ul li {
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid var(--color-white);
+    justify-content: center;
+    transform: skewx(-24deg);
+  }
+  .header__right .menu ul li a {
+    font-size: 1.6rem;
+    padding: 1.8rem;
+  }
+  .header__right .menu ul li a span {
+    display: block;
+    transform: skewx(24deg);
+  }
+
+
   .header__toggle {
     display: none;
   }

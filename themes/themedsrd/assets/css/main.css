@@ -3,3 +3,5 @@
 @import "utils/_utils.reset.css";
 
 @import "layout/_layout.header.css";
+
+@import "components/_components.social-media.css";
