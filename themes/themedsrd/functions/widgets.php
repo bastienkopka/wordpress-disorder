@@ -49,3 +49,25 @@ function themedsrd_social_customizer($wp_customize): void {
 	}
 }
 add_action('customize_register', 'themedsrd_social_customizer');
+
+function themedsrd_customizer_title($wp_customize): void {
+	// Add section for upload logo
+	$wp_customize->add_section('header_section_title', [
+		'title' => __('Title'),
+		'priority' => 20,
+	]);
+	// Add a parameter for logo
+	$wp_customize->add_setting('header_title');
+	// Add a control to upload logo
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'header_title',
+			[
+				'label' => __('Télécharger le titre :'),
+				'section' => 'header_section_title',
+				'settings' => 'header_title',
+			]
+		)
+	);
+}
+add_action('customize_register', 'themedsrd_customizer_title');

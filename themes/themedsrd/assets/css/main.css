@@ -1,5 +1,26 @@
-@import "utils/_utils.fonts.css";
-@import "utils/_utils.variables.css";
-@import "utils/_utils.reset.css";
+@import "reset.css";
+@import "overlay.css";
+@import "header.css";
+@import "submenu.css";
+@import "page.css";
 
-@import "layout/_layout.header.css";
+
+/********* Social media **********/
+.social-media__list {
+  display: flex;
+  margin-left: 5rem;
+}
+
+.social-media__list li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.social-media__list li a > i {
+  font-size: 2rem;
+  color: var(--color-white);
+  text-shadow: 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background), 0 0 1px var(--color-background);
+}
+
+.social-media__list li a > i:hover{
+  color: blueviolet;
+}

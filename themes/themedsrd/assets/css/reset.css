@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Zekton';
+  src: url('../fonts/zekton/zekton.otf');
+}
+
+:root {
+  --font-zekton: 'Zekton', Arial;
+
+  --color-white: #ffffff;
+  --color-grey: #393939;
+  --color-background: #181c23;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: var(--font-zekton);
+  color: var(--color-white);
+  background-color: var(--color-background);
+}
+
+@media (min-width: 992px) {
+  .d-lg-none {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .d-sm-none {
+    display: none;
+  }
+}

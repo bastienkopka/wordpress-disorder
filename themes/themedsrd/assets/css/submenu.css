@@ -1,0 +1,18 @@
+.sub-menu-wrap.activated{
+    display: inherit !important;  
+    position: absolute;
+    z-index: 150;
+    margin-left: 3rem;
+}
+
+.sub-menu-wrap.activated ul li a{
+   color: white !important;
+  }
+
+.sub-menu-wrap.activated ul li:hover a{
+     color: blueviolet !important;
+}
+
+.sub-menu-wrap.activated ul li:hover::after{
+    display: none;
+}
